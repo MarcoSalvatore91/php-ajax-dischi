@@ -21,11 +21,13 @@
         <main>
             <section>
                 <div class="section-discs row">
-                    <div v-for="disc in discs" class="discs col-4">
+                    <div v-for="disc in discs" class="discs col-2">
                         <img :src="disc.poster" :alt="disc.title">
-                        <h5>{{ disc.title }}</h5>
-                        <span>{{ disc.author }}</span><br>
-                        <span>{{ disc.year }}</span>
+                        <div class="info">
+                            <h5 class="text-white">{{ disc.title }}</h5>
+                            <span class="grey">{{ disc.author }}</span><br>
+                            <span class="grey">{{ disc.year }}</span>
+                        </div>
                     </div>
                 </div>
             </section>

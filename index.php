@@ -29,11 +29,13 @@ include 'api/data/discs.php';
         <section>
             <div class="section-discs row">
                 <?php foreach ($database as $discs) : ?>
-                    <div class="discs col-4">
+                    <div class="discs col-2">
                         <img src="<?= $discs['poster'] ?>" alt="<?= $discs['title'] ?>">
-                        <h5><?= $discs['title'] ?></h5>
-                        <span><?= $discs['author'] ?></span><br>
-                        <span><?= $discs['year'] ?></span>
+                        <div class="info">
+                            <h5 class="text-white"><?= $discs['title'] ?></h5>
+                            <span class="grey"><?= $discs['author'] ?></span><br>
+                            <span class="grey"><?= $discs['year'] ?></span>
+                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
