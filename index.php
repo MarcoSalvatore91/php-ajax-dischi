@@ -19,16 +19,20 @@ include 'api/data/discs.php';
 
 <body>
 
-    <header></header>
+    <header>
+
+        <img src="img/unnamed.png" alt="logo">
+
+    </header>
 
     <main>
         <section>
-            <div class="row">
+            <div class="section-discs row">
                 <?php foreach ($database as $discs) : ?>
                     <div class="discs col-4">
                         <img src="<?= $discs['poster'] ?>" alt="<?= $discs['title'] ?>">
                         <h5><?= $discs['title'] ?></h5>
-                        <span><?= $discs['author'] ?></span>
+                        <span><?= $discs['author'] ?></span><br>
                         <span><?= $discs['year'] ?></span>
                     </div>
                 <?php endforeach; ?>

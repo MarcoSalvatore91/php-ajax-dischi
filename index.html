@@ -14,15 +14,17 @@
 <body>
     <div id="root">
 
-        <header></header>
+        <header>
+            <img src="img/unnamed.png" alt="logo">
+        </header>
 
         <main>
             <section>
-                <div class="row">
+                <div class="section-discs row">
                     <div v-for="disc in discs" class="discs col-4">
                         <img :src="disc.poster" :alt="disc.title">
                         <h5>{{ disc.title }}</h5>
-                        <span>{{ disc.author }}</span>
+                        <span>{{ disc.author }}</span><br>
                         <span>{{ disc.year }}</span>
                     </div>
                 </div>
