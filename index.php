@@ -23,14 +23,16 @@ include 'api/data/discs.php';
 
     <main>
         <section>
-            <?php foreach ($database as $discs) : ?>
-                <div class="discs">
-                    <img src="<?= $discs['poster'] ?>" alt="">
-                    <h5><?= $discs['title'] ?></h5>
-                    <span><?= $discs['author'] ?></span>
-                    <span><?= $discs['year'] ?></span>
-                </div>
-            <?php endforeach; ?>
+            <div class="row">
+                <?php foreach ($database as $discs) : ?>
+                    <div class="discs col-4">
+                        <img src="<?= $discs['poster'] ?>" alt="<?= $discs['title'] ?>">
+                        <h5><?= $discs['title'] ?></h5>
+                        <span><?= $discs['author'] ?></span>
+                        <span><?= $discs['year'] ?></span>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </section>
     </main>
 
